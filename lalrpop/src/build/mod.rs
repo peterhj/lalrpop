@@ -14,6 +14,7 @@ use crate::session::{ColorConfig, Session};
 use crate::tls::Tls;
 use crate::tok;
 use crate::util::Sep;
+use is_terminal::IsTerminal;
 use itertools::Itertools;
 use lalrpop_util::ParseError;
 use tiny_keccak::{Hasher, Sha3};
@@ -21,7 +22,7 @@ use walkdir::WalkDir;
 
 use std::ffi::OsStr;
 use std::fs;
-use std::io::{self, BufRead, IsTerminal, Read, Write};
+use std::io::{self, BufRead, Read, Write};
 use std::path::{Path, PathBuf};
 use std::process::exit;
 use std::rc::Rc;
